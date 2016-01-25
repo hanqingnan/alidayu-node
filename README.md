@@ -31,6 +31,7 @@
 * sms_template_code : 短信接收号码。支持单个或多个手机号码，传入号码为11位手机号码，不能加0或+86。群发短信需传入多个号码，以英文逗号分隔，一次调用最多传入200个号码。示例：18600000000,13911111111,13322222222 `String 必选`
 
 * sms_param : 短信模板变量，传参规则{"key":"value"}，key的名字须和申请模板中的变量名一致，多个变量之间以逗号隔开。示例：针对模板“验证码${code}，您正在进行${product}身份验证，打死不要告诉别人哦！”，传参时需传入{"code":"1234","product":"alidayu"}  `Json 必选`
+
 #### 示例
 		app.smsSend({
             sms_free_sign_name: "ccccc",
@@ -46,6 +47,7 @@
 * resutl.model ： 返回结果 `String`
 * resutl.success ： true表示成功，false表示失败 `Boolean`
 * resutl.msg ：返回信息描述 `String`
+
 ##### 示例
 		{
     		"alibaba_aliqin_fc_sms_num_send_response":{
@@ -57,6 +59,7 @@
         		}
     		}
 		}
+		
 #### 异常示例
 		{
     		"error_response":{
@@ -147,7 +150,7 @@
                 "sub_msg":"非法参数"
             }
         }
-        
+
 #### 错误代码解释
 * isv.OUT_OF_SERVICE					业务停机	登陆www.alidayu.com 进入管理中心充值
 * isv.MOBILE_NUMBER_ILLEGAL				手机号码格式非法	使用合法的手机号码
