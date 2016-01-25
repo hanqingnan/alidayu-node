@@ -81,12 +81,14 @@
 
 ### 短信发送记录查询 [ali API](http://open.taobao.com/doc2/apiDetail.htm?spm=0.0.0.0.MarhXq&apiId=26039)
 * smsQuery -> Promise
+
 #### options 
-biz_id : 短信发送流水  `String (可选)`
-rec_num : 短信接收号码  `String 必选`
-query_date: 短信发送日期，支持近30天记录查询，格式yyyyMMdd `String 必选`
-current_page: 分页参数,页码 `Number 必选`
-page_size : 分页参数，每页数量。最大值100  `Number 必选`
+* biz_id : 短信发送流水  `String (可选)`
+* rec_num : 短信接收号码  `String 必选`
+* query_date: 短信发送日期，支持近30天记录查询，格式yyyyMMdd `String 必选`
+* current_page: 分页参数,页码 `Number 必选`
+* page_size : 分页参数，每页数量。最大值100  `Number 必选`
+
 #### 示例
 		app.smsQuery({
             rec_num: "13811111111",
@@ -97,6 +99,7 @@ page_size : 分页参数，每页数量。最大值100  `Number 必选`
             console.log(result);
             done();
         });
+        
 #### 响应参数
 * current_page	: 当前页码 `Number`
 * page_size	: 每页数量 `Number`
