@@ -99,7 +99,7 @@
             console.log(result);
             done();
         });
-        
+
 #### 响应参数
 * current_page	: 当前页码 `Number`
 * page_size	: 每页数量 `Number`
@@ -113,6 +113,7 @@
 * values.sms_receiver_time : 短信接收时间 `Date 2015-12-12 12:12:12`
 * values.sms_send_time : 短信发送时间 `Date 2015-12-12 12:12:12`
 * values.sms_status : 发送状态 `Number 1：等待回执，2：发送失败，3：发送成功`
+
 ##### 示例
 		{
             "alibaba_aliqin_fc_sms_num_query_response":{
@@ -136,6 +137,7 @@
                 }
             }
         }
+
 #### 异常示例
 		{
             "error_response":{
@@ -145,6 +147,7 @@
                 "sub_msg":"非法参数"
             }
         }
+        
 #### 错误代码解释
 * isv.OUT_OF_SERVICE					业务停机	登陆www.alidayu.com 进入管理中心充值
 * isv.MOBILE_NUMBER_ILLEGAL				手机号码格式非法	使用合法的手机号码
