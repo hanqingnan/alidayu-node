@@ -3,6 +3,8 @@ const crypto = require('crypto');
 const request = require('request');
 const _ = require('lodash');
 const util = require('util');
+const Promise = require('bluebird');
+
 /**
  * 工具
  *
@@ -33,17 +35,17 @@ module.exports = {
      */
     sign : function(options, appSecret){
         let keys = _.keys(options).sort();
-        let proStr = [];
+        let preStr = [appSecret];
 
         _.forEach(keys, function(key){
             let value = options[key];
             if(util.isObject(value)) value = JSON.stringify(value);
 
-            proStr.push([key, value].join(''));
+            preStr.push([key, value].join(''));
         });
-        proStr.push(appSecret);
+        preStr.push(appSecret);
 
-        return this.md5(proStr.join(''));
+        return this.md5(preStr.join(''));
     },
     /**
      * 请求
@@ -59,7 +61,7 @@ module.exports = {
                 if (err) reject(err);
 
                 resolve(body);
-            })
+            });
         });
     }
 }

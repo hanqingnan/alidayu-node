@@ -1,25 +1,33 @@
 {
   "name": "alidayu-node-sdk",
   "description": "阿里大鱼 for node with es6",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./test/alidayu.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/hanqingnan/alidayu-node.git"
   },
-  "author": "",
+  "author": "hanqingnan",
+  "keywords": [
+    "alidayu",
+    "阿里大鱼"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/hanqingnan/alidayu-node/issues"
   },
   "homepage": "https://github.com/hanqingnan/alidayu-node",
   "dependencies": {
+    "bluebird": "^3.1.1",
     "lodash": "^4.0.0",
     "moment": "^2.11.1",
     "request": "^2.67.0",
     "underscore": "^1.8.3"
+  },
+  "devDependencies" :{
+    "mocha": "*"
   }
 }
